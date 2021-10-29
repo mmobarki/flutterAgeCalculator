@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "salman",
+            "Age Calculator",
             style: TextStyle(color: c3, fontSize: 30),
           ),
           centerTitle: true,
