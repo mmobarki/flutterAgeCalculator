@@ -1,5 +1,3 @@
-//import 'package:flutter/animation.dart';
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'age.dart';
 
@@ -15,10 +13,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var c1 = Color(0xff1f415a);
-  var c2 = Color(0xfffb9684);
-  var c3 = Color(0xfff7deca);
-  var c4 = Color(0xffc9cbc8);
+  var c1 = const Color(0xff1f415a);
+  var c2 = const Color(0xfffb9684);
+  var c3 = const Color(0xfff7deca);
+  var c4 = const Color(0xffc9cbc8);
   var c5 = Colors.white;
   var password_visible = true;
   int str = 0;
@@ -42,9 +40,9 @@ class _MyAppState extends State<MyApp> {
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Container(
-                    margin: EdgeInsets.all(8),
+                    margin: const EdgeInsets.all(8),
                     child: TextField(
                       decoration: InputDecoration(
                         //fillColor: null,1
@@ -80,7 +78,7 @@ class _MyAppState extends State<MyApp> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(90.0),
                       ),
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: const Text(
                         "Get my Age!",
                         style: TextStyle(
@@ -89,7 +87,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 60),
+                  const SizedBox(height: 60),
                   Container(
                     child: Text(
                       "Your age is: $str ",
@@ -102,9 +100,11 @@ class _MyAppState extends State<MyApp> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: c2,
           onPressed: () => setState(() {
-            c1 = c1 == Colors.black ? Color(0xff294c6f) : Colors.black;
-            c2 = c2 == Colors.white ? Color(0xfffb9684) : Colors.white;
-            c3 = c3 == Color(0xfff7deca) ? Colors.black : Color(0xfff7deca);
+            c1 = c1 == Colors.black ? const Color(0xff294c6f) : Colors.black;
+            c2 = c2 == Colors.white ? const Color(0xfffb9684) : Colors.white;
+            c3 = c3 == const Color(0xfff7deca)
+                ? Colors.black
+                : const Color(0xfff7deca);
           }),
         ),
       ),
